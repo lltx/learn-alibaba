@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: nacos-discovery-gateway-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        metadata:
+          name: lengleng
+    gateway:
+      routes:
+        - id: nacos-discovery-provider
+          uri: lb://nacos-discovery-provider
+          predicates:
+            - Path=/provider/**
+          filters:
+            - StripPrefix=1
+
+server:
+  port: 8054
+
+

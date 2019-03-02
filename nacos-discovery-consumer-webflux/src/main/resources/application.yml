@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: nacos-discovery-consumer-webflux
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        metadata:
+           name: lengleng
+
+server:
+  port: 8053
+
+
