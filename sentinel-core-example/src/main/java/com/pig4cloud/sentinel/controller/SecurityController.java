@@ -15,23 +15,27 @@
  * Author: lengleng (wangiegie@gmail.com)
  */
 
-package com.pig4cloud.sentinel.config;
+package com.pig4cloud.sentinel.controller;
 
-import com.alibaba.csp.sentinel.adapter.servlet.callback.WebCallbackManager;
-import org.springframework.context.annotation.Configuration;
-
-import javax.annotation.PostConstruct;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author lengleng
  * @date 2019-12-04
  */
-@Configuration
-public class SentinelConfig {
+@RestController
+public class SecurityController {
 
-    @PostConstruct
-    public void init() {
-        WebCallbackManager.setUrlBlockHandler(new DemoUrlBlockHandler());
-        WebCallbackManager.setRequestOriginParser(new IpRequestOriginParser());
+    @GetMapping("/white")
+    public String white() {
+        return "hello white";
     }
+
+    @GetMapping("/black")
+    public String black() {
+        return "hello black";
+    }
+
+
 }

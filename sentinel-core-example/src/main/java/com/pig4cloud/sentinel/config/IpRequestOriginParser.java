@@ -17,21 +17,23 @@
 
 package com.pig4cloud.sentinel.config;
 
-import com.alibaba.csp.sentinel.adapter.servlet.callback.WebCallbackManager;
-import org.springframework.context.annotation.Configuration;
+import com.alibaba.csp.sentinel.adapter.servlet.callback.RequestOriginParser;
 
-import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author lengleng
- * @date 2019-12-04
+ * @date 2019-12-05
  */
-@Configuration
-public class SentinelConfig {
-
-    @PostConstruct
-    public void init() {
-        WebCallbackManager.setUrlBlockHandler(new DemoUrlBlockHandler());
-        WebCallbackManager.setRequestOriginParser(new IpRequestOriginParser());
+public class IpRequestOriginParser implements RequestOriginParser {
+    /**
+     * Parse the origin from given HTTP request.
+     *
+     * @param request HTTP request
+     * @return parsed origin
+     */
+    @Override
+    public String parseOrigin(HttpServletRequest request) {
+        return request.getRemoteAddr();
     }
 }
