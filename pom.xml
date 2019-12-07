@@ -37,5 +37,7 @@
         <module>nacos-config-client-load</module>
 
         <module>sentinel-core-example</module>
+        <module>sentinel-feign-provier</module>
+        <module>sentinel-feign-consumer</module>
     </modules>
 </project>
