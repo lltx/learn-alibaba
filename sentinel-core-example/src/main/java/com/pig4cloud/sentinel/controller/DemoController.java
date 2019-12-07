@@ -35,7 +35,7 @@ public class DemoController {
     }
 
     @GetMapping("/resource")
-    @SentinelResource(value = "resource", blockHandler = "exHandler", blockHandlerClass = {ExceptionUtil.class})
+    @SentinelResource(value = "hello2", blockHandler = "exHandler", blockHandlerClass = {ExceptionUtil.class})
     public String resource() {
         return "hello resource";
     }

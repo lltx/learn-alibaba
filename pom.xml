@@ -35,5 +35,7 @@
 
         <module>nacos-config-client</module>
         <module>nacos-config-client-load</module>
+
+        <module>sentinel-core-example</module>
     </modules>
 </project>

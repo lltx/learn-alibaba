@@ -6,5 +6,18 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8080
+      datasource:
+        ds1:
+          file:
+            file: classpath:flowrule.json
+            data-type: json
+            rule-type: flow
+        ds2:
+          nacos:
+            server-addr: localhost:8848
+            dataId: sentinel-core-example
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
   application:
     name: sentinel-core-example

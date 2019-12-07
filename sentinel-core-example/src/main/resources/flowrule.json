@@ -1,0 +1,10 @@
+[
+  {
+    "resource": "hello",
+    "count": 1,
+    "grade": 1,
+    "limitApp": "default",
+    "strategy": 0,
+    "controlBehavior": 0
+  }
+]
