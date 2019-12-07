@@ -1,0 +1,9 @@
+server:
+  port: 18081
+
+spring:
+  application:
+    name: sentinel-feign-comsumer
+  cloud:
+    nacos:
+      server-addr: localhost:8848
