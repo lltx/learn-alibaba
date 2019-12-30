@@ -17,6 +17,7 @@
 
 package com.pig4cloud.seata.seatabizservice.service;
 
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,6 +32,7 @@ public class BizService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @GlobalTransactional
     @Transactional
     public void biz() {
         restTemplate.getForObject("http://localhost:8020/order", String.class);

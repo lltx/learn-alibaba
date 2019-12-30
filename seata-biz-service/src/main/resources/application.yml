@@ -9,8 +9,3 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-
-  cloud:
-    alibaba:
-      seata:
-        tx-service-group:
