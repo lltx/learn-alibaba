@@ -39,5 +39,9 @@
         <module>sentinel-core-example</module>
         <module>sentinel-feign-provier</module>
         <module>sentinel-feign-consumer</module>
+
+        <module>seata-biz-service</module>
+        <module>seata-order-service</module>
+        <module>seata-pay-service</module>
     </modules>
 </project>
